@@ -1,0 +1,49 @@
+.menuItemContainer {
+    width: -webkit-fill-available;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: center;
+    justify-content: center;
+}
+
+.menuItemContainer:hover {
+    cursor: pointer;
+
+    .hoverHighlight {
+        opacity: 1;
+    }
+
+    .menuButton {
+        color: hsl(233, 26%, 24%);
+    }
+}
+
+.menuButton {
+    width: 70%;
+    height: 100%;
+    
+    display: flex;
+    
+    align-content: center;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    color: hsl(233, 8%, 62%);
+}
+
+.hoverHighlight {
+    height: 0.2rem;
+    width: 70%;
+
+    background: rgb(49,211,92);
+    background: -moz-linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+    background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+
+    opacity: 0;
+
+    transition-duration: 0.1s;
+}
+

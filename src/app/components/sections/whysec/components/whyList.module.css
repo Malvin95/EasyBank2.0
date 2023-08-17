@@ -1,0 +1,21 @@
+.wl_ItemContainer {
+    width: 270px;
+    min-height: 270px;
+
+    margin-right: 45px;
+}
+
+.wl_ItemImage, .wl_ItemTitle, .wl_ItemSubtitle {
+    margin-bottom: 30px;
+}
+
+.wl_ItemTitle {
+    font-size: 18pt;
+    color: hsl(233, 26%, 24%);
+}
+
+.wl_ItemSubtitle {
+    color: hsl(233, 8%, 62%);
+    font-size: 12pt;
+    line-height: 21pt;
+}

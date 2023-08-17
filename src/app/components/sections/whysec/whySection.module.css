@@ -1,0 +1,45 @@
+.whySectionContainer {
+    display: flex;
+    width: 100%;
+    min-height: 660px;
+    z-index: 1;
+    justify-content: center;
+
+    background-color: hsl(220, 16%, 96%);
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+
+    margin: auto 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerContainer {
+    width: 60%;
+}
+
+.header {
+    font-size: 30pt;
+    font-weight: 300;
+
+    margin-bottom: 35px;
+    color: hsl(233, 25%, 24%);
+}
+
+.subHeading {
+    color: hsl(233, 8%, 62%);
+    font-size: 20px;
+
+    max-width: 650px;
+}
+
+.contentContainer {
+    width: 100%;
+    display: flex;
+
+    margin-top: 75px;
+}
