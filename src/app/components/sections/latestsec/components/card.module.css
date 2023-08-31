@@ -1,0 +1,53 @@
+.cardContainer {
+    width: 285px;
+    min-height: 425px;
+    margin-right: 30px;
+}
+
+.cardFrame {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cardImage{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.cardImageContainer {
+    width: 100%;
+    height: 45%;
+
+    position: relative;
+}
+
+.cardContentWrapper {
+    margin: 30px;
+}
+
+.authorText {
+    margin: 5px auto 10px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.authorText, 
+.contentText {
+    color: hsl(233, 8%, 62%);
+}
+
+.contentText {
+    font-weight: 300;
+
+    margin-bottom: 
+}
+
+.titleText {
+    font-weight: 400;
+    font-size: 18px;
+
+    margin: 15px auto;
+}

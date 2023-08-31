@@ -5,7 +5,9 @@
     margin-right: 45px;
 }
 
-.wl_ItemImage, .wl_ItemTitle, .wl_ItemSubtitle {
+.wl_ItemImage,
+.wl_ItemTitle,
+.wl_ItemSubtitle {
     margin-bottom: 30px;
 }
 

@@ -1,7 +1,38 @@
+.contentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 75px;
+}
+
+.header {
+    font-size: 30pt;
+    font-weight: 300;
+
+    margin-bottom: 35px;
+    color: hsl(233, 25%, 24%);
+}
+
+.headerContainer {
+    width: 60%;
+}
+
 .latestSectionContainer {
     display: flex;
     width: 100%;
-    height: 660px;
+    min-height: 660px;
+    justify-content: center;
 
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+
+    margin: auto 100px;
+    display: flex;
+    flex-wrap: wrap;
 }
