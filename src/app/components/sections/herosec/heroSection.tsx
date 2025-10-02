@@ -1,7 +1,8 @@
-import InviteButton from '../../inviteButton/inviteButton';
-import Image from 'next/image';
 import styles from './heroSection.module.css';
-import imageMockup from '../../../../../public/images/image-mockups.png';
+import Image from 'next/image';
+
+import imageMockup from '/public/images/image-mockups.png';
+import InviteButton from 'app/components/inviteButton/inviteButton';
 
 export default function HeroSection() {
     return(

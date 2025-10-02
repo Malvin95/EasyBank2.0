@@ -1,4 +1,5 @@
 import styles from './latestArticleSection.module.css';
+
 import { Content } from './components/cardContent';
 import Card from './components/card';
 
