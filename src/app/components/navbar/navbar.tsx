@@ -1,8 +1,10 @@
-import MenuItem from './menuItem/menuItem';
-
 import styles from './navbar.module.css';
-import logo from '../../../../public/images/logo.svg';
+
 import Image from 'next/image';
+
+import logo from '/public/images/logo.svg';
+
+import MenuItem from './menuItem/menuItem';
 import InviteButton from '../inviteButton/inviteButton';
 
 export default function Navbar() {

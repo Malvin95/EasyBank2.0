@@ -1,11 +1,13 @@
 import styles from './footer.module.css';
-import logo from '../../../../public/images/logo.svg';
 import Image from 'next/image';
-import facebookIcon from '../../../../public/images/icon-facebook.svg';
-import youtubeIcon from '../../../../public/images/icon-youtube.svg';
-import twitterIcon from '../../../../public/images/icon-twitter.svg';
-import pinterestIcon from '../../../../public/images/icon-pinterest.svg';
-import instagramIcon from '../../../../public/images/icon-instagram.svg';
+
+import logo from '/public/images/logo.svg';
+import facebookIcon from '/public/images/icon-facebook.svg';
+import youtubeIcon from '/public/images/icon-youtube.svg';
+import twitterIcon from '/public/images/icon-twitter.svg';
+import pinterestIcon from '/public/images/icon-pinterest.svg';
+import instagramIcon from '/public/images/icon-instagram.svg';
+
 import IconItem from './components/iconItem';
 import InviteButton from '../inviteButton/inviteButton';
 
@@ -29,7 +31,7 @@ export default function Footer() {
             <div className={styles.footerSubject}>
                 <div className={styles.leftJustifiedFooter}>
                     <div className={styles.logoContainer}>
-                        <Image src={logo} alt='logo' className={styles.footerLogo}/>
+                        <Image src={logo} alt='logo' className={styles.footerLogo} style={{color: 'ffffff'}}/>
                     </div>
                     <div className={styles.faviconContainer}>
                         {iconList.map((icon, key) => {
