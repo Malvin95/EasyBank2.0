@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/",
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -25,7 +25,8 @@
       }
     ],
     "paths": {
-      "@/components/*": ["components/*"]
+      "@components/*": ["src/app/components/*"],
+      "@images/*": ["public/images/*"],
     }
   },
   "include": [
