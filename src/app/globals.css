@@ -79,13 +79,6 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-standard);
-}
-
 html,
 body {
   max-width: 100vw;
