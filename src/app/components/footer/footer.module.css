@@ -81,7 +81,7 @@
     margin: auto 0px auto auto;
     height: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
 }
