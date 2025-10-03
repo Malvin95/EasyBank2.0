@@ -6,7 +6,7 @@
     "."
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,14 +16,18 @@
     "@types/node": "18.15.11",
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "eslint-config-next": "15.5.4",
+    "next": "15.5.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7"
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0"
+  },
+  "overrides": {
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0"
   }
 }
