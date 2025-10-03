@@ -1,8 +1,8 @@
 import styles from './heroSection.module.css';
 import Image from 'next/image';
 
-import imageMockup from '/public/images/image-mockups.png';
-import InviteButton from 'app/components/inviteButton/inviteButton';
+import imageMockup from 'app/public/images/image-mockups.png';
+import InviteButton from '@components/inviteButton/inviteButton';
 
 export default function HeroSection() {
     return(

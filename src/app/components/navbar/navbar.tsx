@@ -2,10 +2,10 @@ import styles from './navbar.module.css';
 
 import Image from 'next/image';
 
-import logo from '/public/images/logo.svg';
+import logo from '@images/logo.svg';
 
+import InviteButton from '@components/inviteButton/inviteButton';
 import MenuItem from './menuItem/menuItem';
-import InviteButton from '../inviteButton/inviteButton';
 
 export default function Navbar() {
     return(
