@@ -13,13 +13,16 @@
   },
   "dependencies": {
     "@next/font": "^13.3.0",
+    "@tailwindcss/postcss": "^4.1.14",
     "@types/node": "18.15.11",
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
     "eslint-config-next": "15.5.4",
     "next": "15.5.4",
+    "postcss": "^8.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "tailwindcss": "^4.1.14",
     "typescript": "5.0.2"
   },
   "devDependencies": {
