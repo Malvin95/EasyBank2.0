@@ -6,12 +6,12 @@ import twitterIcon from '@images/icon-twitter.svg';
 import pinterestIcon from '@images/icon-pinterest.svg';
 import instagramIcon from '@images/icon-instagram.svg';
 
-type iconObject = {
+export type iconProps = {
     src: any;
     alt: string;
 }
 
-const iconList: iconObject[] = [
+const iconList: iconProps[] = [
     {'src': facebookIcon, 'alt':'Facebook'},
     {'src': youtubeIcon, 'alt': 'Youtube'},
     {'src': twitterIcon, 'alt': 'Twitter'},

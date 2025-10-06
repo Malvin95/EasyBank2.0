@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/nextjs'
+import type { Preview } from '@storybook/nextjs';
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +9,9 @@ const preview: Preview = {
       },
     },
   },
+  initialGlobals: {
+    theme: 'dark'
+  }
 };
 
 export default preview;

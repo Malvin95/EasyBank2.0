@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
 import InviteButton from '@components/inviteButton/inviteButton';
-import LinkList from '@components/atoms/LinkList';
-import IconList from '@components/atoms/IconList';
+import LinkList from '@components/atoms/LinkList/LinkList';
+import IconList from '@components/atoms/IconList/IconList';
 
 export default function Footer() {
     return(
@@ -21,12 +21,8 @@ export default function Footer() {
             </div>
             <div className={styles.footerSubject}>
                 <div className={styles.linkContainer}>
-                    <div className={styles.leftLinkList}>
-                        <LinkList list={['About Us', 'Contact', 'Blog']} />
-                    </div>
-                    <div className={styles.rightLinkList}> 
-                        <LinkList list={['Careers', 'Support', 'Privacy Policy']} />
-                    </div>
+                    <LinkList list={['About Us', 'Contact', 'Blog']} />
+                    <LinkList list={['Careers', 'Support', 'Privacy Policy']} />
                 </div>
             </div>
             <div className={styles.footerSubject}>
