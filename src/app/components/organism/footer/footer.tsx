@@ -10,7 +10,7 @@ export default function Footer() {
     return(
         <div className={styles.footerContainer}>
             <div className={styles.footerSubject}>
-                <div className={styles.leftJustifiedFooter}>
+                <div className="h-full w-fit m-auto ml-0">
                     <div className={styles.logoContainer}>
                         <Image src={footerlogo} alt='logo' className="m-auto" />
                     </div>
@@ -20,13 +20,13 @@ export default function Footer() {
                 </div>
             </div>
             <div className={styles.footerSubject}>
-                <div className={styles.linkContainer}>
+                <div className="m-auto h-full flex">
                     <LinkList list={['About Us', 'Contact', 'Blog']} />
                     <LinkList list={['Careers', 'Support', 'Privacy Policy']} />
                 </div>
             </div>
             <div className={styles.footerSubject}>
-                <div className={styles.rightJustifiedFooter}>
+                <div className="h-full text-right mt-auto mb-auto">
                     <div className={styles.btnContainer}>
                         <InviteButton />
                     </div>
