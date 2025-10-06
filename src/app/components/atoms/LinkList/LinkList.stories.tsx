@@ -12,7 +12,7 @@ const meta = {
 } satisfies Meta<typeof LinkList>;
 
 export default meta;
-type Story = StoryObj<typeof LinkList>
+type Story = StoryObj<typeof LinkList>;
 
 export const List: Story = {
     args: {
