@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google';
 import styles from './page.module.css';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/molecules/navbar/navbar';
 import HeroSection from './components/sections/herosec/heroSection';
 import WhySection from './components/sections/whysec/whySection';
 import LatestSection from './components/sections/latestsec/latestArticlesSection';
-import Footer from './components/organism/footer/footer';
+import Footer from './components/molecules/footer/footer';
 
 const inter = Inter({ 
   subsets: ['latin'],

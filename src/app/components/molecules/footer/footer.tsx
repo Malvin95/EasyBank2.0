@@ -2,7 +2,7 @@ import styles from './footer.module.css';
 import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
-import InviteButton from '@components/inviteButton/inviteButton';
+import InviteButton from '@components/atoms/inviteButton/inviteButton';
 import LinkList from '@components/atoms/LinkList/LinkList';
 import IconList from '@components/atoms/IconList/IconList';
 

@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 import logo from '@images/logo.svg';
 
-import InviteButton from '@components/inviteButton/inviteButton';
-import MenuItem from './menuItem/menuItem';
+import InviteButton from '@components/atoms/inviteButton/inviteButton';
+import MenuItem from '../../atoms/menuItem/menuItem';
 
 export default function Navbar() {
     return(
