@@ -1,6 +1,6 @@
 import { fn } from "storybook/internal/test";
 import IconList from "./IconList";
-import { StoryObj } from "@storybook/nextjs/*";
+import { Meta, StoryObj } from "@storybook/nextjs/*";
 
 
 const meta = {
@@ -10,22 +10,20 @@ const meta = {
         layout: 'centered',
     },
     tags: ['autodocs'],
-    argTypes: {
-        backgroundColor: { 
-            control: 'color',
-         },
-    },
+    argTypes: {},
     args: { 
         onClick: fn(),
     },
-};
+    render: () => (
+        <div className="w-fit h-[50%] m-auto flex">
+            <IconList />
+        </div>
+    )
+} satisfies Meta<typeof IconList>;
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof IconList>
 
 export const Default: Story = {
-    args: {
-        primary: true,
-        label: 'IconList',
-    },
+    args: {},
 };
