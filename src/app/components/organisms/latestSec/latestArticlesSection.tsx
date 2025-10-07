@@ -1,7 +1,7 @@
 import styles from './latestArticleSection.module.css';
 
-import { Content } from './components/cardContent';
-import Card from './components/card';
+import { Content } from '../../atoms/card/cardContent';
+import Card from '../../atoms/card/card';
 
 export default function LatestSection() {
     return(
