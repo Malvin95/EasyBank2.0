@@ -13,7 +13,7 @@ const config: StorybookConfig = {
   "stories": [
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [],
+  "addons": [getAbsolutePath("@storybook/addon-styling-webpack")],
   "framework": {
     "name": getAbsolutePath('@storybook/nextjs'),
     "options": {}
