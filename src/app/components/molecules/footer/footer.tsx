@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
 import InviteButton from '@components/atoms/inviteButton/inviteButton';
-import LinkList from '@components/atoms/LinkList/LinkList';
-import IconList from '@components/atoms/IconList/IconList';
+import LinkList from '@components/atoms/linkList/linkList';
+import IconList from '@components/atoms/iconList/iconList';
 
 export default function Footer() {
     return(

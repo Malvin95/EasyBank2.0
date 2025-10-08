@@ -11,4 +11,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Footer>;
 
-export const footer: Story = {} satisfies Story;
+export const PrimaryFooterSection: Story = {} satisfies Story;
