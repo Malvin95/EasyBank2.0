@@ -1,4 +1,4 @@
-import WhyList from './components/whyList';
+import WhyList from '../../atoms/infoList/whyList';
 import styles from './whySection.module.css';
 
 export default function WhySection() {

@@ -6,12 +6,12 @@ import twitterIcon from '@images/icon-twitter.svg';
 import pinterestIcon from '@images/icon-pinterest.svg';
 import instagramIcon from '@images/icon-instagram.svg';
 
-export type iconProps = {
+export type iconBarProps = {
     src: any;
     alt: string;
 }
 
-const iconList: iconProps[] = [
+const iconList: iconBarProps[] = [
     {'src': facebookIcon, 'alt':'Facebook'},
     {'src': youtubeIcon, 'alt': 'Youtube'},
     {'src': twitterIcon, 'alt': 'Twitter'},
@@ -19,7 +19,7 @@ const iconList: iconProps[] = [
     {'src': instagramIcon, 'alt': 'Instagram'}
 ];
 
-export default function IconList() {
+export default function IconBar() {
     return(
         <>
             {iconList.map((icon, key) => {

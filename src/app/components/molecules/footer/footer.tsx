@@ -2,9 +2,9 @@ import styles from './footer.module.css';
 import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
-import InviteButton from '@components/inviteButton/inviteButton';
-import LinkList from '@components/atoms/LinkList/LinkList';
-import IconList from '@components/atoms/IconList/IconList';
+import InviteButton from '@components/atoms/inviteButton/inviteButton';
+import IconBar from '@components/atoms/icon-bar/icon-bar';
+import LinkList from '@components/atoms/link-list/link-list';
 
 export default function Footer() {
     return(
@@ -15,7 +15,7 @@ export default function Footer() {
                         <Image src={footerlogo} alt='logo' className="m-auto" />
                     </div>
                     <div className={styles.faviconContainer}>
-                        <IconList />
+                        <IconBar />
                     </div>
                 </div>
             </div>

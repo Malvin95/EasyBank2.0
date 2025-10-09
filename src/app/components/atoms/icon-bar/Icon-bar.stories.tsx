@@ -1,11 +1,11 @@
 import { fn } from "storybook/internal/test";
-import IconList from "./IconList";
+import IconBar from "./icon-bar";
 import { StoryObj } from "@storybook/nextjs/*";
 
 
 const meta = {
     title: 'Atom/IconList',
-    component: IconList,
+    component: IconBar,
     parameters: {
         layout: 'centered',
     },
