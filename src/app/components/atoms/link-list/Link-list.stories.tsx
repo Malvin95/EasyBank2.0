@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs/*";
-import LinkList from "./link-list";
+import LinkList from "./LinkList";
 
 
 const meta = {

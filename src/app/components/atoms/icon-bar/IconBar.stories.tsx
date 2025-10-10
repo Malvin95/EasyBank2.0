@@ -1,5 +1,5 @@
 import { fn } from "storybook/internal/test";
-import IconBar from "./icon-bar";
+import IconBar from "./IconBar";
 import { StoryObj } from "@storybook/nextjs/*";
 
 

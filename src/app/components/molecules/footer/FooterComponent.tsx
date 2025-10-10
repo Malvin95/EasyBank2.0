@@ -2,9 +2,9 @@ import styles from './footer.module.css';
 import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
-import InviteButton from '@components/atoms/inviteButton/inviteButton';
-import IconBar from '@components/atoms/icon-bar/icon-bar';
-import LinkList from '@components/atoms/link-list/link-list';
+import InviteButton from '@components/atoms/inviteButton/InviteButtonComponent';
+import LinkList from '@components/atoms/link-list/LinkList';
+import IconBar from '@components/atoms/icon-bar/IconBar';
 
 export default function Footer() {
     return(

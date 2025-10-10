@@ -1,5 +1,6 @@
-import WhyList from '../../atoms/infoList/whyList';
 import styles from './whySection.module.css';
+
+import WhyList from '@components/atoms/infoList/InfoList';
 
 export default function WhySection() {
     let subtext = 'We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.';

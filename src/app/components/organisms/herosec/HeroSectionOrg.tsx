@@ -2,7 +2,7 @@ import styles from './heroSection.module.css';
 import Image from 'next/image';
 
 import imageMockup from 'app/public/images/image-mockups.png';
-import InviteButton from '@components/atoms/inviteButton/inviteButton';
+import InviteButton from '@components/atoms/inviteButton/InviteButtonComponent';
 
 export default function HeroSection() {
     return(
