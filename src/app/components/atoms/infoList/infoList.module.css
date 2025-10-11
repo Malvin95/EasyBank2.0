@@ -7,7 +7,7 @@
 
 .il_ItemImage,
 .il_ItemTitle,
-.il_ItemSubtitle {
+.il_ItemContent {
     margin-bottom: 30px;
 }
 
@@ -16,7 +16,7 @@
     color: hsl(233, 26%, 24%);
 }
 
-.il_ItemSubtitle {
+.il_ItemContent {
     color: hsl(233, 8%, 62%);
     font-size: 12pt;
     line-height: 21pt;
