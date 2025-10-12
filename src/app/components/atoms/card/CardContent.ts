@@ -1,4 +1,4 @@
-export const Content = [
+export const blogContent = [
     {
         imageUrl:   '/images/image-currency.jpg',
         author:     'Claire Robinson',
@@ -27,4 +27,31 @@ export const Content = [
         content:    'After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...',
         alt:        'confetti'
     }
+]
+
+export const infoContent = [
+    {
+        imageUrl:   '/images/icon-online.svg',
+        title:      'Online Banking',
+        content:    'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.',
+        alt:        'Why Icon'
+    },
+    {
+        imageUrl:   '/images/icon-budgeting.svg',
+        title:      'Simple Budgeting',
+        content:    'See exactly where your money goes each month. Receive notifications when you`re close to hitting your limits.',
+        alt:        'Budgeting Icon'
+    },
+    {
+        imageUrl:   '/images/icon-onboarding.svg',
+        title:      'Fast Onboarding',
+        content:    'We don`t do branches. Open your account in minutes online and start taking control of your finances right away.',
+        alt:        'Onboarding Icon'
+    },
+    {
+        imageUrl:   '/images/icon-api.svg',
+        title:      'Open API',
+        content:    'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.',
+        alt:        'API Icon'
+    },
 ]

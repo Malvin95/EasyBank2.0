@@ -1,7 +1,7 @@
+import Card, { CardType } from '@components/atoms/card/Card';
 import styles from './latestArticleSection.module.css';
 
-import { Content } from '@components/atoms/card/CardContent';
-import Card from '@components/atoms/card/CardComponent';
+import { blogContent } from '@components/atoms/card/CardContent';
 
 export default function LatestSection() {
     return(
@@ -11,8 +11,9 @@ export default function LatestSection() {
                     <p className={styles.header}>Latest Articles</p>
                 </div>
                 <div className={styles.contentContainer}>
-                    {Content.map((item, key) => (
-                            <Card 
+                    {blogContent.map((item, key) => (
+                            <Card
+                                cardType={CardType.BLOG}
                                 imageUrl={item.imageUrl}
                                 author={item.author}
                                 title={item.title}
