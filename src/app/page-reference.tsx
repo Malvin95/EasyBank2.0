@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import Navbar from './components/molecules/navbar/NavbarComponent'
+import Navbar from '@components/molecules/collapsible-navbar/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
