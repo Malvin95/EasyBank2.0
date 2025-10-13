@@ -1,12 +1,13 @@
 import { infoContent } from '@components/atoms/card/CardContent';
 import styles from './whySection.module.css';
-import Card, { CardType } from '@components/atoms/card/Card';
+import Card, { CardFormat } from '@components/atoms/card/Card';
+import SectionContainer, { ContainerFormat } from '@components/atoms/sectionContainer/SectionContainer';
 
 export default function WhySection() {
     let subtext = 'We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.';
     
     return(
-        <div className={styles.whySectionContainer}>
+        <SectionContainer containerFormat={ContainerFormat.WHY}>
             <div className={styles.wrapper}>
                 <div className={styles.headerContainer}>
                     <p className={styles.header}>Why choose Easybank?</p>
@@ -15,7 +16,7 @@ export default function WhySection() {
                 <div className={styles.contentContainer}>
                     {infoContent.map((item, key) => (
                         <Card
-                            cardType={CardType.INFO}
+                            cardType={CardFormat.INFO}
                             imageUrl={item.imageUrl}
                             title={item.title}
                             content={item.content}
@@ -25,6 +26,6 @@ export default function WhySection() {
                     ))}
                 </div>
             </div>
-        </div>
+        </SectionContainer>   
     )
 }
