@@ -1,9 +1,12 @@
-import Image from "next/image";
-import logo from '@images/logo.svg';
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { IconButton, Menu, MenuItem } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
+import Image from "next/image";
+
+import logo from '@images/logo.svg';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { IconButton, MenuItem, Popover } from "@mui/material";
 
 import * as MenuListItem from '@components/atoms/menu-item/MenuItem';
 
@@ -30,26 +33,52 @@ function RenderSmallMenu() {
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
                 >
-                    <MenuIcon />
+                    {open ? (<CloseIcon />) : (<MenuIcon />) }
                 </IconButton>
             </div>
 
-            <Menu
+            <Popover
                 id='small-menu'
-                anchorEl={anchorEl}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'center',
+                }}
+                anchorEl={null}
                 open={open}
                 onClose={handleClose}
                 slotProps={{
-                list: {
-                    'aria-labelledby': 'sandwichBtn',
-                },
+                    root: {
+                        style: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }
+                    },
+                    paper: {
+                        style: {
+                            width: '82%',
+                            maxWidth: '300px'
+                        }
+                    }
                 }}
             >
-                {menuElements.map((menuItem, key) => (
-                        <MenuItem onClick={handleClose} key={key}>{menuItem}</MenuItem>
-                    )
-                )}
-            </Menu>
+                    {menuElements.map((menuItem, key) => (
+                            <MenuItem 
+                                onClick={handleClose} 
+                                key={key}
+                                className="flex"
+                            >
+                                <div className="m-auto">
+                                    {menuItem}
+                                </div>
+                            </MenuItem>
+                        )
+                    )}
+            </Popover>
         </>
     )
 }
@@ -67,7 +96,7 @@ function RenderWideMenu() {
 }
 
 export default function Navbar() {
-    const matches = useMediaQuery('(min-width:769px)');
+    const matches = useMediaQuery('(min-width:897px)');
 
     return(
         <div className="flex w-full h-20 z-[3] bg-white">
