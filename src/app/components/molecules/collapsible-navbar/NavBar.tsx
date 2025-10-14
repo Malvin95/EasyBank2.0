@@ -1,6 +1,6 @@
 'use client'; 
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import logo from '@images/logo.svg';
@@ -15,9 +15,10 @@ const menuElements: string[] = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export default function Navbar() {
     const matches = useMediaQuery('(min-width:897px)');
+    const navBarRef = useRef(null);
 
     return(
-        <div className="flex w-full h-20 z-[3] bg-white">
+        <div ref={navBarRef} className="flex w-full h-20 z-[3] bg-white">
             <div className="flex w-1/4 ml-4 content-center flex-wrap text-center justify-center">
                 <Image 
                     src={logo}
@@ -26,7 +27,7 @@ export default function Navbar() {
             </div>
             {/* If we are at mobile size 768px*/}
             {!matches && (
-                <SmallMenu menuStrings={menuElements} />
+                <SmallMenu menuStrings={menuElements} navBarRef={navBarRef}/>
             )}
             
             {/* If media is >= 769px */}

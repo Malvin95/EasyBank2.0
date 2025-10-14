@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { RefObject, useState } from "react";
 
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -8,12 +8,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import { IconButton, MenuItem, Popover, PopoverOrigin } from "@mui/material";
 
 
-export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
+export default function SmallMenu({ menuStrings, navBarRef }: { menuStrings: string[], navBarRef: RefObject<HTMLElement|null> }) {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(event.currentTarget);
+    const handleClick = () => {
+        setAnchorEl(navBarRef.current);
     };
     const handleClose = () => {
         setAnchorEl(null);
@@ -29,6 +29,7 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
         },
         paper: {
             style: {
+                marginTop: '15px',
                 width: '82%',
                 maxWidth: '300px'
             }
@@ -48,6 +49,7 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
         <>
             <div className="m-auto mr-2">
                 <IconButton
+                    role="menu-btn"
                     id='sandwichBtn'
                     aria-label='menu'
                     aria-controls={open ? 'small-menu' : undefined}
@@ -55,7 +57,7 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
                 >
-                    {open ? (<CloseIcon />) : (<MenuIcon />) }
+                    {open ? (<CloseIcon role="close-icon"/>) : (<MenuIcon role="open-icon"/>)}
                 </IconButton>
             </div>
 
@@ -63,7 +65,7 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
                 id='small-menu'
                 anchorOrigin={anchorOrigin}
                 transformOrigin={transformOrigin}
-                anchorEl={null}
+                anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
                 slotProps={slotProps}
