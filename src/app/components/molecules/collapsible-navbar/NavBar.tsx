@@ -1,3 +1,5 @@
+'use client'; 
+
 import React from "react";
 import Image from "next/image";
 
@@ -7,6 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import SmallMenu from "@components/atoms/small-menu/SmallMenu";
 import LargeMenu from "@components/atoms/large-menu/LargeMenu";
+import InviteButton from "@components/atoms/invite-button/InviteButtonComponent";
 
 const menuElements: string[] = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
@@ -28,7 +31,12 @@ export default function Navbar() {
             
             {/* If media is >= 769px */}
             {matches && (
-                <LargeMenu menuStrings={menuElements} />
+                <>
+                    <LargeMenu menuStrings={menuElements} />
+                    <div className="flex w-1/4 align-center content-center flex-wrap text-center justify-center pr-14">
+                        <InviteButton />
+                    </div>
+                </>
             )}
         </div>
     )
