@@ -1,19 +1,19 @@
 import { Meta, StoryObj } from "@storybook/nextjs/*";
-import SmallMenu from "./SmallMenu";
+import LargeMenu from "./LargeMenu";
 
 const menuList = ['menu item 1', 'menu item 2', 'menu item 3', 'menu item 4'];
 
 const meta = {
-    title: 'Atom/Small Menu',
-    component: SmallMenu,
+    title: 'Atom/Large Menu',
+    component: LargeMenu,
     tags: ['autodocs']
-} satisfies Meta<typeof SmallMenu>;
+} satisfies Meta<typeof LargeMenu>;
 
 export default meta;
-type Story = StoryObj<typeof SmallMenu>;
+type Story = StoryObj<typeof LargeMenu>;
 
-export const SmallMenuComponent: Story = {
+export const LargeMenuComponent: Story = {
     args:{
         menuStrings: menuList
     }
-} satisfies Story;
+} satisfies Story;;
