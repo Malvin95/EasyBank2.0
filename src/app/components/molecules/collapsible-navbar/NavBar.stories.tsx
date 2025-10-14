@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/nextjs/*";
 import Navbar from "./NavBar";
 
 const meta = {
-    title: 'Organism/CollapsibleNavBar',
+    title: 'Molecule/CollapsibleNavBar',
     component: Navbar,
     tags: ['autodocs']
 } satisfies Meta<typeof Navbar>;

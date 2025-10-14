@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/nextjs/*";
 import SmallMenu from "./SmallMenu";
 import { useRef } from "react";
-import { expect, screen } from "storybook/internal/test";
+import { expect, screen } from "storybook/test";
 
 const menuStrings = ['menu item 1', 'menu item 2', 'menu item 3', 'menu item 4'];
 const simpleMenuStrings = ['menu item', 'menu item', 'menu item', 'menu item'];
