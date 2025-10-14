@@ -66,18 +66,18 @@ function RenderSmallMenu() {
                     }
                 }}
             >
-                    {menuElements.map((menuItem, key) => (
-                            <MenuItem 
-                                onClick={handleClose} 
-                                key={key}
-                                className="flex"
-                            >
-                                <div className="m-auto">
-                                    {menuItem}
-                                </div>
-                            </MenuItem>
-                        )
-                    )}
+                {menuElements.map((menuItem, key) => (
+                        <MenuItem 
+                            onClick={handleClose} 
+                            key={key}
+                            className="flex"
+                        >
+                            <div className="m-auto">
+                                {menuItem}
+                            </div>
+                        </MenuItem>
+                    )
+                )}
             </Popover>
         </>
     )

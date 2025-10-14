@@ -10,4 +10,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Navbar>;
 
-export const SmallNavBar: Story = {} satisfies Story;
+export const CollapsibleNavBar: Story = {} satisfies Story;
