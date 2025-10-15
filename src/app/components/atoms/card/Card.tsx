@@ -18,10 +18,10 @@ export type CardData = {
 export default function Card({cardType, imageUrl, author, title, content, alt}: CardData){
     const cardWrapper = cardType == CardFormat.BLOG ? "min-h-[425px]" : "min-h-[200px]";
     const blogCardFrame = cardType == CardFormat.BLOG ? "rounded-sm bg-white" : "";
-    const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "";
+    const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
 
     return(
-        <div className={`w-72 inline-flex mr-8 ${cardWrapper}`}>
+        <div className={`w-72 inline-flex ${cardWrapper}`}>
             <div className={`w-full ${blogCardFrame}`}>
                 {cardType === CardFormat.BLOG && (
                     <div className="w-full">
@@ -38,7 +38,7 @@ export default function Card({cardType, imageUrl, author, title, content, alt}: 
                     {cardType === CardFormat.INFO && (
                         <Image 
                             src={imageUrl}
-                            className="rounded-t-sm mb-6"
+                            className="rounded-t-sm mb-6 m-auto xl:ml-0"
                             height={70}
                             width={70}
                             alt={alt} 
