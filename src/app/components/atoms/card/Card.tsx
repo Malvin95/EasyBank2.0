@@ -16,7 +16,7 @@ export type CardData = {
 }
 
 export default function Card({cardType, imageUrl, author, title, content, alt}: CardData){
-    const cardWrapper = cardType == CardFormat.BLOG ? "min-h-[425px]" : "min-h-[200px]";
+    const cardWrapper = cardType == CardFormat.BLOG ? "h-[425px] mb-5" : "min-h-[200px]";
     const blogCardFrame = cardType == CardFormat.BLOG ? "rounded-sm bg-white" : "";
     const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
 
