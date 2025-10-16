@@ -1,13 +1,13 @@
 import { infoContent } from '@components/atoms/card/CardContent';
 import Card, { CardFormat } from '@components/atoms/card/Card';
-import SectionContainer, { ContainerFormat } from '@components/molecules/sectionContainer/SectionContainer';
+import SectionContainer, { TemplateFormat } from '@components/molecules/sectionContainer/SectionContainer';
 
 export default function WhySection() {
     let subtext = 'We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.';
     
     return(
         <SectionContainer 
-            containerFormat={ContainerFormat.WHY} 
+            templateFormat={TemplateFormat.WHY} 
             title={'Why choose Easybank?'} 
             subtitle={subtext}           
         >
