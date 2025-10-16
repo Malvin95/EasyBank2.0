@@ -1,12 +1,12 @@
 import Card, { CardFormat } from '@components/atoms/card/Card';
 
 import { blogContent } from '@components/atoms/card/CardContent';
-import SectionContainer, { ContainerFormat } from '@components/molecules/sectionContainer/SectionContainer';
+import SectionContainer, { TemplateFormat } from '@components/molecules/sectionContainer/SectionContainer';
 
 export default function LatestSection() {
     return(
         <SectionContainer 
-            containerFormat={ContainerFormat.LATEST}
+            templateFormat={TemplateFormat.LATEST}
             title={'Latest Articles' }
         >
             {blogContent.map((item, key) => (
