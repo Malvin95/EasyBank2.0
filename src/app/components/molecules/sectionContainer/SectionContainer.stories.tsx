@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs/*";
-import SectionContainer, { ContainerFormat } from "./SectionContainer";
+import SectionContainer, { TemplateFormat } from "./SectionContainer";
 
 const meta = {
     title: 'Molecule/Section Container',
@@ -12,7 +12,7 @@ type Story = StoryObj<typeof SectionContainer>;
 
 export const StandardContainer: Story = {
     args: {
-        containerFormat: ContainerFormat.LATEST,
+        templateFormat: TemplateFormat.LATEST,
         title: 'Test Title',
     },
     render: (args) => {
@@ -26,7 +26,7 @@ export const StandardContainer: Story = {
 
 export const SectionSubtitleContainer: Story = {
     args: {
-        containerFormat: ContainerFormat.LATEST,
+        templateFormat: TemplateFormat.LATEST,
         title: 'Test Title',
         subtitle: 'Here is a subtitle for the container'
     },
