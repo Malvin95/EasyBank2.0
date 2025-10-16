@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 
-export enum CardType {
+export enum CardFormat {
     INFO = 'InfoCard',
     BLOG = 'BlobCard'
 };
 
 export type CardData = {
-    cardType: CardType,
+    cardType: CardFormat,
     imageUrl: string,
     author?: string,
     title: string,
@@ -16,14 +16,14 @@ export type CardData = {
 }
 
 export default function Card({cardType, imageUrl, author, title, content, alt}: CardData){
-    const cardWrapper = cardType == CardType.BLOG ? "min-h-[425px]" : "min-h-[200px]";
-    const blogCardFrame = cardType == CardType.BLOG ? "rounded-sm bg-white" : "";
-    const cardContentContainer = cardType == CardType.BLOG ? "m-8" : "";
+    const cardWrapper = cardType == CardFormat.BLOG ? "h-[425px] mb-5" : "min-h-[200px]";
+    const blogCardFrame = cardType == CardFormat.BLOG ? "rounded-sm bg-white" : "";
+    const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
 
     return(
-        <div className={`w-72 inline-flex mr-8 ${cardWrapper}`}>
+        <div className={`w-72 inline-flex ${cardWrapper}`}>
             <div className={`w-full ${blogCardFrame}`}>
-                {cardType === CardType.BLOG && (
+                {cardType === CardFormat.BLOG && (
                     <div className="w-full">
                         <Image 
                             src={imageUrl}
@@ -35,10 +35,10 @@ export default function Card({cardType, imageUrl, author, title, content, alt}: 
                     </div>
                 )}
                 <div className={cardContentContainer}>
-                    {cardType === CardType.INFO && (
+                    {cardType === CardFormat.INFO && (
                         <Image 
                             src={imageUrl}
-                            className="rounded-t-sm mb-6"
+                            className="rounded-t-sm mb-6 m-auto xl:ml-0"
                             height={70}
                             width={70}
                             alt={alt} 

@@ -1,4 +1,4 @@
-import Card, { CardType } from "./Card";
+import Card, { CardFormat } from "./Card";
 import { Meta, StoryObj } from "@storybook/nextjs/*";
 import onlineImage from '../../../../../public/images/icon-online.svg';
 
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Card>;
 
 export const InfoCard: Story = {
     args: {
-        cardType: CardType.INFO,
+        cardType: CardFormat.INFO,
         imageUrl: onlineImage,
         title: 'Test Info Title',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique tortor et ultricies tristique.',
@@ -26,7 +26,7 @@ export const InfoCard: Story = {
 
 export const BlogCard: Story = {
     args: {
-        cardType: CardType.BLOG,
+        cardType: CardFormat.BLOG,
         imageUrl: '/images/image-currency.jpg',
         author: 'John Doe',
         title: 'Test Blog Title',
