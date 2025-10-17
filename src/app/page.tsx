@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google';
 import styles from './page.module.css';
-import HeroSection from '@components/organisms/hero-section/HeroSectionOrg';
 import WhySection from '@components/organisms/why-section/WhySectionOrg';
 import LatestSection from '@components/organisms/latest-section/LatestArticlesOrg';
 import Footer from '@components/molecules/footer/FooterComponent';
 import Navbar from '@components/molecules/collapsible-navbar/NavBar';
+import { HeroSection, ResponsiveHeroSection } from '@components/organisms/hero-section/HeroSectionOrg';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -16,7 +16,8 @@ export default function Home() {
     <main className={inter.className}>
       <div className={styles.main}>
         <Navbar />
-        <HeroSection />
+        <ResponsiveHeroSection />
+        {/* <HeroSection /> */}
         <WhySection />
         <LatestSection />
         <Footer />
