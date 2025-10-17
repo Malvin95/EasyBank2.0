@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import HeroSection from '@components/organisms/hero-section/HeroSectionOrg';
+import { HeroSection, ResponsiveHeroSection } from '@components/organisms/hero-section/HeroSectionOrg';
 import WhySection from '@components/organisms/why-section/WhySectionOrg';
 import LatestSection from '@components/organisms/latest-section/LatestArticlesOrg';
 import Footer from '@components/molecules/footer/FooterComponent';
@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <main className={inter.className}>
       <Navbar />
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <ResponsiveHeroSection />
       <WhySection />
       <LatestSection />
       <Footer />

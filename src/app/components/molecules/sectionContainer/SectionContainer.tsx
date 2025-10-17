@@ -3,9 +3,9 @@ import ContainerTemplate from "@components/atoms/container-template/ContainerTem
 import React from "react";
 
 export enum TemplateFormat {
-    HERO,
-    WHY,
-    LATEST
+    HERO = 'Hero',
+    WHY = 'Why',
+    LATEST = 'Latest'
 }
 
 export type ContainerType = {
