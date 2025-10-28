@@ -1,4 +1,3 @@
-import styles from './footer.module.css';
 import Image from 'next/image';
 
 import footerlogo from '@images/footer-logo.svg';
@@ -8,31 +7,25 @@ import IconBar from '@components/atoms/icon-bar/IconBar';
 
 export default function Footer() {
     return(
-        <div className={styles.footerContainer}>
-            <div className={styles.footerSubject}>
-                <div className="h-full w-fit m-auto ml-0">
-                    <div className={styles.logoContainer}>
-                        <Image src={footerlogo} alt='logo' className="m-auto" />
+        <div className="flex w-full content-center justify-center bg-[hsl(233,26%,24%)] center min-h-48">  {/*Formerly footerContainer className.*/}
+            <div className='h-full w-2xs mt-auto mb-auto sm:w-[580px] md:flex md:w-2xl lg:w-4xl xl:w-6xl'> {/* New div */}
+                <div className="h-40 flex flex-col justify-evenly w-fit m-auto md:w-1/3">
+                    <div className="w-fit">
+                        <Image src={footerlogo} alt='logo'/>
                     </div>
-                    <div className={styles.faviconContainer}>
+                    <div className="w-fit flex">
                         <IconBar />
                     </div>
                 </div>
-            </div>
-            <div className={styles.footerSubject}>
-                <div className="m-auto h-full flex">
-                    <LinkList list={['About Us', 'Contact', 'Blog']} />
+                <div className="h-full w-fit m-auto md:w-1/5">
+                    <LinkList list={['About Us', 'Contact', 'Blog']}/>
+                </div>
+                <div className="h-full w-fit m-auto md:w-1/5">
                     <LinkList list={['Careers', 'Support', 'Privacy Policy']} />
                 </div>
-            </div>
-            <div className={styles.footerSubject}>
-                <div className="h-full text-right mt-auto mb-auto">
-                    <div className={styles.btnContainer}>
-                        <InviteButton />
-                    </div>
-                    <div className={styles.copyrightContainer}>
-                        <p>© Easybank. All Rights Reserved</p>
-                    </div>
+                <div className="h-40 flex justify-evenly items-center flex-col md:w-1/3 md:items-end">
+                    <InviteButton />
+                    <p className='text-center md:text-end text-[hsl(233,8%,62%)]'>© Easybank. All Rights Reserved</p>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ export default function Card({cardType, imageUrl, author, title, content, alt}: 
     const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
 
     return(
-        <div className={`w-72 inline-flex ${cardWrapper}`}>
+        <div className={`w-68 inline-flex ${cardWrapper}`}>
             <div className={`w-full ${blogCardFrame}`}>
                 {cardType === CardFormat.BLOG && (
                     <div className="w-full">
