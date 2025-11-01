@@ -1,5 +1,4 @@
 import { Inter } from 'next/font/google';
-import styles from './page.module.css';
 import HeroSection from '@components/organisms/hero-section/HeroSectionOrg';
 import WhySection from '@components/organisms/why-section/WhySectionOrg';
 import LatestSection from '@components/organisms/latest-section/LatestArticlesOrg';
@@ -14,13 +13,11 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={inter.className}>
-      <div className={styles.main}>
-        <Navbar />
-        <HeroSection />
-        <WhySection />
-        <LatestSection />
-        <Footer />
-      </div>
+      <Navbar />
+      <HeroSection />
+      <WhySection />
+      <LatestSection />
+      <Footer />
     </main>
   );
 };

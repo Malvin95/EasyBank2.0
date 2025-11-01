@@ -1,88 +1,55 @@
 'use client';
 
-import { RefObject, useState } from "react";
+import { useEffect, useState } from "react";
 
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import Image from "next/image";
 
-import { IconButton, MenuItem, Popover, PopoverOrigin } from "@mui/material";
+import openIcon from '@images/icon-hamburger.svg';
+import crossIcon from '@images/icon-close.svg';
 
+import * as MenuListItem from '@components/atoms/menu-item/MenuItem';
+import { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from '@components/shadcn/ui/popover';
+import { Button } from '@components/shadcn/ui/button';
+import { PopoverClose } from "@radix-ui/react-popover";
 
-export default function SmallMenu({ menuStrings, navBarRef }: { menuStrings: string[], navBarRef: RefObject<HTMLElement|null> }) {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-    const open = Boolean(anchorEl);
+export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [menuIcon, setMenuIcon] = useState<any>(openIcon);
 
-    const handleClick = () => {
-        setAnchorEl(navBarRef.current);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const slotProps = {
-        root: {
-            style: {
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }
-        },
-        paper: {
-            style: {
-                marginTop: '15px',
-                width: '82%',
-                maxWidth: '300px'
-            }
+    useEffect(() => {
+        if (isOpen) {
+            setMenuIcon(crossIcon);
+        } else {
+            setMenuIcon(openIcon);
         }
-    };
-
-    const anchorOrigin: PopoverOrigin = {
-        vertical: 'bottom',
-        horizontal: 'center',
-    };
-    const transformOrigin: PopoverOrigin = {
-        vertical: 'top',
-        horizontal: 'center',
-    };
+    }, [isOpen]);
 
     return(
-        <>
-            <div className="m-auto mr-2">
-                <IconButton
-                    role="menu-btn"
-                    id='sandwichBtn'
-                    aria-label='menu'
-                    aria-controls={open ? 'small-menu' : undefined}
-                    aria-haspopup='true'
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                >
-                    {open ? (<CloseIcon role="close-icon"/>) : (<MenuIcon role="open-icon"/>)}
-                </IconButton>
-            </div>
+        <Popover>
+            <PopoverAnchor className="w-full flex">
+                <PopoverTrigger asChild className='m-auto mr-0 bg-white'>
+                    <Button onClick={() => {
+                            setIsOpen(!isOpen)
+                        }}
+                        role="menu-btn"
+                    >
+                        <Image src={menuIcon} alt={isOpen ? "close menu" : "open menu"} />
+                    </Button>
+                </PopoverTrigger>
 
-            <Popover
-                id='small-menu'
-                anchorOrigin={anchorOrigin}
-                transformOrigin={transformOrigin}
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                slotProps={slotProps}
-            >
-                {menuStrings.map((menuItem, key) => (
-                        <MenuItem 
-                            onClick={handleClose} 
-                            key={key}
-                            className="flex"
-                        >
-                            <div className="m-auto">
-                                {menuItem}
-                            </div>
-                        </MenuItem>
-                    )
-                )}
-            </Popover>
-        </>
+                <PopoverContent className="w-72 mt-4 border-none">
+                    <PopoverClose
+                        onClick={() => {
+                            setIsOpen(!isOpen);
+                        }}
+                        className="w-full"
+                    >
+                        {menuStrings.map((menuItem, key) => (
+                            <MenuListItem.default title={menuItem} key={key} />
+                        ))}
+                    </PopoverClose>
+                </PopoverContent>
+            </PopoverAnchor>
+        </Popover>
     )
 }

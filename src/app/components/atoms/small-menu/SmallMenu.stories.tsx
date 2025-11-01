@@ -23,7 +23,7 @@ export const SmallMenuComponent: Story = {
         const testRef = useRef<HTMLDivElement|null>(null);
         return(
             <div className="w-full bg-white flex" ref={testRef}>
-                <SmallMenu menuStrings={args.menuStrings} navBarRef={testRef}/>
+                <SmallMenu menuStrings={args.menuStrings} />
             </div>
         )
     },
@@ -37,24 +37,20 @@ export const MenuIconSwitches: Story = {
         const testRef = useRef<HTMLDivElement|null>(null);
         return(
             <div className="w-full bg-white flex" ref={testRef}>
-                <SmallMenu menuStrings={args.menuStrings} navBarRef={testRef}/>
+                <SmallMenu menuStrings={args.menuStrings} />
             </div>
         )
     },
     play: async({canvas, userEvent}) => {
 
         // Check the initial state of the navbar
-        const menuBtn = await canvas.findByRole('menu-btn'); 
-        let menuIcon = await canvas.findByRole('open-icon', { hidden: true});
-        await expect(menuIcon).toBeVisible();
+        const menuBtn = await canvas.findByRole('menu-btn');
+        const menuIcon = await canvas.findByRole('img');
+        expect(menuIcon).toHaveAttribute('alt', 'open menu');
 
         // Click on the menu btn and expect it to switch Icon
         await userEvent.click(menuBtn);
-        await expect(menuIcon).not.toBeVisible(); // Expect the open menu icon to disappear
-
-        // Check that the close menu Icon is visible
-        const closeMenu = await canvas.findByRole('close-icon', { hidden: true});
-        await expect(closeMenu).toBeVisible();
+        await expect(menuIcon).toHaveAttribute('alt', 'close menu'); // Expect the open menu icon to disappear
 
         // Check that popover menu appears and populates with options
         const menuItems = await screen.findAllByText('menu item');
@@ -64,10 +60,6 @@ export const MenuIconSwitches: Story = {
         await userEvent.click(menuItems[1]);
 
         // Check that the Close menu icon switches out
-        await expect(closeMenu).not.toBeVisible();
-
-        // Check that the Menu Icon switches in.
-        menuIcon = await canvas.findByRole('open-icon', { hidden: true});
-        await expect(menuIcon).toBeVisible();
+        expect(menuIcon).toHaveAttribute('alt', 'open menu');
     }
 }
