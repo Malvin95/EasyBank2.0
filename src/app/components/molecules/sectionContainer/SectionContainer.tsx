@@ -1,4 +1,4 @@
-import ContainerFrame from "@components/atoms/container-frame/ContainerFrame";
+import ContainerWrapper from "@components/atoms/container-wrapper/ContainerWrapper";
 import ContainerTemplate from "@components/atoms/container-template/ContainerTemplate";
 import React from "react";
 
@@ -17,7 +17,7 @@ export type ContainerType = {
 
 export default function SectionContainer({templateFormat, title, subtitle, children}: ContainerType) {
     return(
-        <ContainerFrame templateFormat={templateFormat}>
+        <ContainerWrapper templateFormat={templateFormat}>
             <ContainerTemplate 
                 templateFormat={templateFormat} 
                 title={title}
@@ -25,6 +25,6 @@ export default function SectionContainer({templateFormat, title, subtitle, child
             >
                 {children}
             </ContainerTemplate>
-        </ContainerFrame>
+        </ContainerWrapper>
     )
 }
