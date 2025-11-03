@@ -16,9 +16,10 @@ export type CardData = {
 }
 
 export default function Card({cardType, imageUrl, author, title, content, alt}: CardData){
-    const cardWrapper = cardType == CardFormat.BLOG ? "h-[425px] mb-5" : "min-h-[200px]";
-    const blogCardFrame = cardType == CardFormat.BLOG ? "rounded-sm bg-white" : "";
-    const cardContentContainer = cardType == CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
+    const cardWrapper = cardType === CardFormat.BLOG ? "h-[425px] mb-5" : "min-h-[200px]";
+    const blogCardFrame = cardType === CardFormat.BLOG ? "rounded-sm bg-white" : "";
+    const cardContentContainer = cardType === CardFormat.BLOG ? "m-8" : "mt-4 mb-4";
+    const blogHover = cardType === CardFormat.BLOG ? "hover:text-lime-400" : "";
 
     return(
         <div className={`w-68 inline-flex ${cardWrapper}`}>
@@ -44,9 +45,9 @@ export default function Card({cardType, imageUrl, author, title, content, alt}: 
                             alt={alt} 
                         />
                     )}
-                    {author && <p className="mt-1 mr-auto ml-auto mb-2.5 text-xs font-light text-gray-400">By {author}</p>}
-                    <p className="font-normal text-lg mt-3.5 mb-2 m-auto text-gray-900">{title}</p>
-                    <p className="mb-1 text-xs font-light text-gray-400">{content}</p>
+                    {author && <p className={`mt-1 mr-auto ml-auto mb-2.5 text-xs font-light text-gray-400 ${blogHover}`}>By {author}</p>}
+                    <p className={`font-normal text-lg mt-3.5 mb-2 m-auto text-gray-900 ${blogHover}`}>{title}</p>
+                    <p className={`mb-1 text-xs font-light text-gray-400 ${blogHover}`}>{content}</p>
                 </div>
             </div>
         </div>
