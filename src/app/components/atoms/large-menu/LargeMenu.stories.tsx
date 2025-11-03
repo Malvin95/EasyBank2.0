@@ -15,5 +15,12 @@ type Story = StoryObj<typeof LargeMenu>;
 export const LargeMenuComponent: Story = {
     args:{
         menuStrings: menuList
-    }
+    },
+    render: (args) => {
+        return(
+            <div className="flex">
+                <LargeMenu menuStrings={args.menuStrings} />
+            </div>
+        )
+    },
 } satisfies Story;;

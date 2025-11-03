@@ -45,7 +45,7 @@ export const MenuIconSwitches: Story = {
 
         // Check the initial state of the navbar
         const menuBtn = await canvas.findByRole('menu-btn');
-        const menuIcon = await canvas.findByRole('img');
+        const menuIcon = await canvas.findByRole('menu-icon');
         expect(menuIcon).toHaveAttribute('alt', 'open menu');
 
         // Click on the menu btn and expect it to switch Icon
