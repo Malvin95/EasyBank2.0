@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import imageMockup from '@images/image-mockups.png'; 
-// import bgImage from '@images/bg-intro-desktop.svg';
+import imageMockup from '@images/image-mockups.png';
 import InviteButton from '@components/atoms/invite-button/InviteButtonComponent';
 import ContainerTemplate from '@components/atoms/container-template/ContainerTemplate';
 import { TemplateFormat } from '@components/molecules/sectionContainer/SectionContainer';
@@ -29,9 +28,7 @@ export function ResponsiveHeroSection() {
                         </ContainerTemplate>
                     </div>
                 </div>
-                {/* Removed the styles: bg-[url(/images/bg-intro-desktop.svg)] bg-no-repeat bg-position-[30%_-350px] bg-size-[240%] */}
-                <div className='w-full lg:h-full lg:w-1/2 xl:w-1/3 z-2'> 
-                    {/* <Image src={bgImage} alt='imgMockups' className={`relative z-1 -top-8 -mb-16 ${mobileStyles} sm:-top-32 sm:-mb-36 md:-top-40 md:-mb-48 lg:top-40 lg:left-[165px] lg:scale-150 xl:scale-200 xl:left-28 xl:top-48 desktop:left-22`}/> */}
+                <div className='w-full lg:h-full lg:w-1/2 xl:w-1/3 z-2'>
                     <Image src={imageMockup} alt='imgMockups' className={`relative z-1 -top-8 -mb-16 ${mobileStyles} sm:-top-32 sm:-mb-36 md:-top-40 md:-mb-48 lg:top-40 lg:left-[165px] lg:scale-150 xl:scale-200 xl:left-28 xl:top-48 desktop:left-22`}/>
                 </div>
             </div>

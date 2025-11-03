@@ -71,9 +71,9 @@
 }
 
 @theme{
-  --breakpoint-mobile: 23.438rem;
-  --breakpoint-desktop: 90rem;
-  --breakpoint-desktop-xl: 160rem;
+  --breakpoint-mobile: 23.438rem; /* 375px */
+  --breakpoint-desktop: 90rem; /* 1440px */
+  --breakpoint-3xl: 160rem; /* 2560px */
 }
 
 @theme inline {
