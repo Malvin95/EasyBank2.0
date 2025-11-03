@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/nextjs/*";
+import { Meta, StoryObj } from '@storybook/nextjs/*';
 import LargeMenu from "./LargeMenu";
 
 const menuList = ['menu item 1', 'menu item 2', 'menu item 3', 'menu item 4'];
 
 const meta = {
-    title: 'Atom/Large Menu',
+    title: 'Atoms/Large Menu',
     component: LargeMenu,
     tags: ['autodocs']
 } satisfies Meta<typeof LargeMenu>;

@@ -1,9 +1,9 @@
 import Card, { CardFormat } from "./Card";
-import { Meta, StoryObj } from "@storybook/nextjs/*";
+import { Meta, StoryObj } from '@storybook/nextjs/*';
 import onlineImage from '../../../../../public/images/icon-online.svg';
 
 const meta = {
-    title: 'Atom/Card',
+    title: 'Atoms/Card',
     component: Card,
     parameters: {
         layout: 'centered',
