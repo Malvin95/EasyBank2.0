@@ -73,6 +73,7 @@
 @theme{
   --breakpoint-mobile: 23.438rem;
   --breakpoint-desktop: 90rem;
+  --breakpoint-desktop-xl: 160rem;
 }
 
 @theme inline {
