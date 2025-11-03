@@ -1,40 +1,142 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EasyBank 2.0
 
-A production Build of the EasyBank coding challenge can be [viewed here](https://easy-bank2-0.vercel.app/)
+A modern, responsive banking landing page built with Next.js 15, React 19, and Tailwind CSS v4. This project demonstrates a component-based architecture following atomic design principles.
 
-## Getting Started
+**🌐 Live Demo:** [View Production Build](https://easy-bank2-0.vercel.app/)
 
-First, run the development server:
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd EasyBank2.0
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📚 Project Overview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+EasyBank 2.0 is a Frontend Mentor challenge implementation featuring:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Next.js 15** with App Router
+- **React 19** with TypeScript
+- **Tailwind CSS v4** with PostCSS
+- **Storybook** for component documentation and testing
+- **Atomic Design** component architecture
+- **Responsive Design** for mobile, tablet, and desktop
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📁 Project Structure
 
-## Learn More
+```
+src/app/
+├── components/
+│   ├── atoms/          # Basic building blocks (buttons, cards, menus)
+│   ├── molecules/       # Simple component groups (navbar, footer, sections)
+│   ├── organisms/       # Complex page sections (hero, why, latest)
+│   └── shadcn/         # UI component library utilities
+├── globals.css         # Global styles and Tailwind configuration
+├── layout.tsx          # Root layout component
+└── page.tsx            # Home page
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Development
+npm run dev              # Start dev server with Turbopack (port 3001)
+npm run build            # Build for production
+npm run start            # Start production server
+npm run lint              # Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Storybook
+npm run storybook        # Start Storybook (port 6006)
+npm run build-storybook  # Build static Storybook
 
-## Deploy on Vercel
+# Testing
+npm run chromatic        # Run Chromatic visual tests
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Core Technologies
+- **Next.js 15.5.4** - React framework with App Router
+- **React 19.2.0** - UI library
+- **TypeScript 5.0.2** - Type safety
+
+### Styling
+- **Tailwind CSS 4.1.16** - Utility-first CSS framework
+- **PostCSS** - CSS processing
+- **tw-animate-css** - Animation utilities
+
+### UI Components
+- **Radix UI** - Accessible component primitives
+- **Lucide React** - Icon library
+- **shadcn/ui** - Component library
+
+### Development Tools
+- **Storybook 9.1.10** - Component development environment
+- **Chromatic** - Visual testing
+- **Playwright** - E2E testing
+- **ESLint** - Code linting
+
+## 📖 Documentation
+
+Comprehensive documentation is available in the `/docs` directory:
+
+- [Component API](./docs/COMPONENT_API.md) - Complete component reference
+- [Architecture](./docs/ARCHITECTURE.md) - Project structure and patterns
+- [Development Guide](./docs/DEVELOPMENT.md) - Setup and workflows
+- [Component Catalog](./docs/COMPONENT_CATALOG.md) - Component hierarchy
+- [Contributing](./docs/CONTRIBUTING.md) - Contribution guidelines
+- [Deployment](./docs/DEPLOYMENT.md) - Build and deployment
+
+## 🧩 Component Architecture
+
+This project follows **Atomic Design** principles:
+
+- **Atoms**: Basic components (Button, Card, MenuItem)
+- **Molecules**: Component groups (Navbar, Footer, SectionContainer)
+- **Organisms**: Page sections (HeroSection, WhySection, LatestSection)
+
+All components include Storybook stories for documentation and testing.
+
+## 🎯 Key Features
+
+- ✅ Fully responsive design (mobile-first)
+- ✅ Accessible components (ARIA compliant)
+- ✅ Type-safe with TypeScript
+- ✅ Component-driven development with Storybook
+- ✅ Optimized images with Next.js Image
+- ✅ Server-side rendering with Next.js
+- ✅ Modern CSS with Tailwind v4
+
+## 🚢 Deployment
+
+The project is configured for deployment on Vercel. See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for detailed instructions.
+
+## 📝 License
+
+This project is a Frontend Mentor challenge solution.
+
+## 🙏 Acknowledgments
+
+- [Frontend Mentor](https://www.frontendmentor.io/) for the design challenge
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS
+
+---
+
+For detailed documentation, see the `/docs` directory.
