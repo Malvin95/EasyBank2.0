@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from "@storybook/nextjs/*";
+import { Meta, StoryObj } from '@storybook/nextjs/*';
 import SectionContainer, { TemplateFormat } from "./SectionContainer";
 
 const meta = {
-    title: 'Molecule/Section Container',
+    title: 'Molecules/Section Container',
     component: SectionContainer,
     tags: ['autodocs']
 } satisfies Meta<typeof SectionContainer>;

@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/nextjs/*";
+import { Meta, StoryObj } from '@storybook/nextjs/*';
 import LinkList from "./LinkList";
 
 
 const meta = {
-    title: 'Atom/LinkList',
+    title: 'Atoms/LinkList',
     component: LinkList,
     parameters: {
         layout: 'centered',
