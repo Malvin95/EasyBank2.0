@@ -8,7 +8,7 @@ import IconBar from '@components/atoms/icon-bar/IconBar';
 export default function Footer() {
     return(
         <div className="flex w-full content-center justify-center bg-[hsl(233,26%,24%)] center min-h-48">
-            <div className='h-full w-2xs mt-auto mb-auto sm:w-[580px] md:flex md:w-2xl lg:w-4xl xl:w-6xl'>
+            <div className='h-full mt-auto mb-auto w-2xs min-w-[375px]:w-80 min-[576px]:w-[500px] sm:w-[580px] md:flex md:w-2xl lg:w-4xl xl:w-6xl'>
                 <div className="h-40 flex flex-col justify-evenly w-fit m-auto md:w-1/3">
                     <div className="w-fit">
                         <Image src={footerlogo} alt='logo'/>
