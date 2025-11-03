@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+A production Build of the EasyBank coding challenge can be [viewed here](https://easy-bank2-0.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
