@@ -11,7 +11,7 @@ import crossIcon from '@images/icon-close.svg';
 import * as MenuListItem from '@components/atoms/menu-item/MenuItem';
 import { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from '@components/shadcn/ui/popover';
 import { Button } from '@components/shadcn/ui/button';
-import { PopoverClose } from "@radix-ui/react-popover";
+import { PopoverClose, PopoverPortal } from "@radix-ui/react-popover";
 
 export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -26,15 +26,14 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
     }, [isOpen]);
 
     return(
-        <div className="w-full flex">
-            <div className="flex basis-[fit-content] w-1/5 content-center flex-wrap text-center justify-center md:ml-0 lg:justify-start">
-                <Image 
-                    src={logo}
-                    alt="logo"
-                />
-            </div>
             <Popover>
                 <PopoverAnchor className="w-full flex">
+                    <div className="flex basis-[fit-content] w-1/5 content-center flex-wrap text-center justify-center md:ml-0 lg:justify-start">
+                        <Image 
+                            src={logo}
+                            alt="logo"
+                        />
+                    </div>
                     <PopoverTrigger asChild className='m-auto mr-0 bg-white pr-0'>
                         <Button onClick={() => {
                                 setIsOpen(!isOpen)
@@ -44,8 +43,10 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
                             <Image src={menuIcon} alt={isOpen ? "close menu" : "open menu"} role="menu-icon"/>
                         </Button>
                     </PopoverTrigger>
+                </PopoverAnchor>
 
-                    <PopoverContent className="w-72 mt-4 border-none">
+                <PopoverPortal>
+                    <PopoverContent className="w-72 mt-4 border-none" >
                         <PopoverClose
                             onClick={() => {
                                 setIsOpen(!isOpen);
@@ -57,8 +58,7 @@ export default function SmallMenu({ menuStrings }: { menuStrings: string[] }) {
                             ))}
                         </PopoverClose>
                     </PopoverContent>
-                </PopoverAnchor>
+                </PopoverPortal>
             </Popover>
-        </div>
     )
 }
