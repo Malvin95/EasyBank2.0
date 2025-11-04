@@ -1,6 +1,6 @@
 ---
-name: 🐛 Bugfix PR
-about: Use this template when fixing a defect or regression.
+name: "🐛 Bugfix PR"
+about: "Use this template when fixing a defect or regression."
 ---
 
 # 🐛 Bugfix Pull Request Checklist
