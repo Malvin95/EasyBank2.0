@@ -354,7 +354,7 @@ Pages are statically generated at build time.
 Using `next/font` for automatic font optimization:
 
 ```tsx
-const inter = Inter({ 
+const publicSans = Public_Sans({ 
   subsets: ['latin'],
   weight: ['300', '400', '700']
 });
