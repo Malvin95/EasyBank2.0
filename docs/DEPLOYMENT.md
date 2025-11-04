@@ -229,7 +229,7 @@ Next.js automatically:
 Using `next/font`:
 
 ```tsx
-const inter = Inter({ 
+const publicSans = Public_Sans({ 
   subsets: ['latin'],
   weight: ['300', '400', '700']
 });
