@@ -1,3 +1,8 @@
+---
+name: 🧹 Chore PR
+about: Use this template for maintenance, refactors, dependency updates, or config changes.
+---
+
 # ⚙️ Chore Pull Request Checklist
 
 

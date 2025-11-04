@@ -1,3 +1,8 @@
+---
+name: ✨ Feature PR
+about: Use this template when adding a new feature or enhancement.
+---
+
 # 🚀 Feature Pull Request Checklist
 
 ## 📝 Summary
